@@ -1,0 +1,81 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Simple Calculator</title>
+  <style>
+body {
+     background-color: blue;
+}
+
+.Inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+
+.Input, .Input2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: cyan;
+  border-radius: 10px 25px;
+  border: none;
+  padding: 10px 10px;
+}
+
+.Submit {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: cyan;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+
+.Input, .Submit, .Result {
+  display: block;
+  margin: 5px;
+}
+
+.Text {
+  display: flex;
+  justify-content: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Result {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+  </style>
+</head>
+<body>
+
+  <h2 class="Text">My simple calculator</h2>
+  <div class="Inputs">
+    <input class="Input" placeholder="2">
+    +
+    <input class="Input2" placeholder="2">
+    <button type="submit" class="Submit">Submit</button>
+    <label class="Result">...</label>
+
+  </div>
+  <script>
+    const inputs = document.querySelector('.Inputs')
+const input = inputs.querySelector('.Input')
+const inputv2 = inputs.querySelector('.Input2')
+const resultlabel = inputs.querySelector('.Result')
+const submit = inputs.querySelector('.Submit')
+
+submit.addEventListener('click', function() {
+  const textinput = input.value;
+  const textinputv2 = inputv2.value;
+  const result = Number(textinput) + Number(textinputv2);
+  resultlabel.textContent = result;
+});
+  </script>
+
+  
+</body>
+</html>
